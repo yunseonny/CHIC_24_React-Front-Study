@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 핵심 정리</title>
+    <link rel="stylesheet" href="csscontext.css">
+</head>
+
+<body>
+    <h1>CSS - 핵심 CSS 총 정리</h1>
+
+    <h2>✅ Background</h2>
+    <ul>
+        <li>background-color : 배경색</li>
+        <li>background-image : 배경 이미지 (url("이미지주소"))</li>
+        <li>background-repeat : 배경 이미지 반복 여부
+            <ul>
+                <li>no-repeat : 반복하지 않음</li>
+                <li>repeat : 반복함</li>
+                <li>repeat-x, repeat-y : 가로반복, 세로반복</li>
+            </ul>
+        </li>
+        <li>background-position : 배경 이미지의 위치 지정 (top, bottom, left, right, center)</li>
+    </ul>
+
+    <h2>✅ Font</h2>
+    <h3>1️⃣ font-size</h3>
+    <table>
+        <tr>
+            <th>단위</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>px</td>
+            <td>고정값, 절대 단위</td>
+        </tr>
+        <tr>
+            <td>em</td>
+            <td>가변 크기(반응형 웹), 상대 단위, 상위 요소의 폰트 사이즈를 상속받음</td>
+        </tr>
+        <tr>
+            <td>rem</td>
+            <td>최상위 요소의 폰트 사이즈를 기준</td>
+        </tr>
+    </table>
+
+    <h3>2️⃣ font-style</h3>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>normal</td>
+            <td>보통 모양</td>
+        </tr>
+        <tr>
+            <td>italic</td>
+            <td>기울임꼴</td>
+        </tr>
+        <tr>
+            <td>oblique</td>
+            <td>기울임꼴</td>
+        </tr>
+    </table>
+
+    <h3>3️⃣ font-weight</h3>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>normal</td>
+            <td>보통 굵기 (숫자 400)</td>
+        </tr>
+        <tr>
+            <td>bold</td>
+            <td>굵은 굵기 (숫자 700)</td>
+        </tr>
+        <tr>
+            <td>bolder</td>
+            <td>상속된 값보다 굵음</td>
+        </tr>
+        <tr>
+            <td>lighter</td>
+            <td>상속된 값보다 얇음</td>
+        </tr>
+        <tr>
+            <td>number</td>
+            <td>100-900</td>
+        </tr>
+    </table>
+
+    <h2>✅ text-align</h2>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>left</td>
+            <td>왼쪽 정렬 (기본값)</td>
+        </tr>
+        <tr>
+            <td>right</td>
+            <td>오른쪽 정렬</td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>가운데 정렬</td>
+        </tr>
+        <tr>
+            <td>justify</td>
+            <td>양쪽 정렬</td>
+        </tr>
+    </table>
+
+    <h2>✅ Box model</h2>
+    <p>HTML의 모든 요소는 box로 표현됩니다.</p>
+    <ul>
+        <li>content : width, height 속성으로 크기 조절</li>
+        <li>border : 테두리</li>
+        <li>padding : border 내부의 여백</li>
+        <li>margin : border 외부의 여백</li>
+    </ul>
+
+    <h3>1️⃣ box-sizing</h3>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>content-box</td>
+            <td>content의 크기만 width, height로 지정</td>
+        </tr>
+        <tr>
+            <td>border-box</td>
+            <td>padding, border를 포함하여 크기 지정</td>
+        </tr>
+    </table>
+
+    <h2>✅ Border</h2>
+    <h3>1️⃣ border-style</h3>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>테두리를 표시하지 않음</td>
+        </tr>
+        <tr>
+            <td>hidden</td>
+            <td>테두리를 표시하지 않음</td>
+        </tr>
+        <tr>
+            <td>dotted</td>
+            <td>둥근 점 테두리</td>
+        </tr>
+        <tr>
+            <td>dashed</td>
+            <td>직사각형 테두리</td>
+        </tr>
+        <tr>
+            <td>solid</td>
+            <td>직선 테두리</td>
+        </tr>
+        <tr>
+            <td>double</td>
+            <td>두 개의 평행한 직선 테두리</td>
+        </tr>
+        <tr>
+            <td>groove</td>
+            <td>파인 테두리</td>
+        </tr>
+        <tr>
+            <td>ridge</td>
+            <td>튀어나온 테두리</td>
+        </tr>
+        <tr>
+            <td>inset</td>
+            <td>파인 테두리</td>
+        </tr>
+        <tr>
+            <td>outset</td>
+            <td>튀어나온 테두리</td>
+        </tr>
+    </table>
+
+    <h3>2️⃣ border-width</h3>
+    <p>선의 굵기를 설정하는 속성 (px, pt, cm, em 등).</p>
+    <h3>3️⃣ border-color</h3>
+    <p>모든 면의 테두리 색상을 설정 (예: border-color: red;).</p>
+    <h3>4️⃣ border-radius</h3>
+    <p>모서리를 둥글게 만듦 (예: border-radius: 10px;).</p>
+
+    <h2>✅ margin</h2>
+    <p>border 외부의 여백 (상하좌우 지정 가능).</p>
+    <h2>✅ padding</h2>
+    <p>content를 둘러싸는 여백 (상하좌우 지정 가능).</p>
+
+    <h2>✅ Selector</h2>
+    <h3>1️⃣ 기본 선택자</h3>
+    <ul>
+        <li>Type Selector (태그 선택자): HTML 요소 이름 기재</li>
+        <li>Universal Selector (전체 선택자): * 사용</li>
+        <li>Group Selector (그룹 선택자): , 사용하여 여러 요소 선택</li>
+    </ul>
+
+    <h3>2️⃣ id & class Selector</h3>
+    <ul>
+        <li>ID Selector: #id 사용</li>
+        <li>Class Selector: .class-name 사용</li>
+    </ul>
+
+    <h3>3️⃣ Attribute Selector</h3>
+    <ul>
+        <li>[attr]: 특정 속성을 가진 요소 선택</li>
+        <li>[attr=value]: 특정 값을 가진 요소 선택</li>
+        <li>[attr~=value]: 단어 포함 요소 선택</li>
+        <li>[attr^=value]: 특정 값으로 시작하는 요소 선택</li>
+        <li>[attr$=value]: 특정 값으로 끝나는 요소 선택</li>
+        <li>[attr*=value]: 특정 값을 포함하는 요소 선택</li>
+    </ul>
+
+    <h2>✅ 결합 선택자</h2>
+    <h3>1️⃣ 상속</h3>
+    <p>자손 결합자 (공백)와 자식 결합자 (>) 사용.</p>
+    <h3>2️⃣ 형제</h3>
+    <ul>
+        <li>일반 형제 결합자 (~): 같은 레벨의 뒤에 있는 형제 선택</li>
+        <li>인접 형제 결합자 (+): 바로 뒤에 있는 형제 선택</li>
+    </ul>
+
+    <h2>✅ 가상 클래스 선택자</h2>
+    <table>
+        <tr>
+            <th>선택자</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>a:link</td>
+            <td>아직 방문한 적이 없는 링크</td>
+        </tr>
+        <tr>
+            <td>a:visited</td>
+            <td>방문한 적이 있는 링크</td>
+        </tr>
+        <tr>
+            <td>:hover</td>
+            <td>마우스를 올렸을 때</td>
+        </tr>
+        <tr>
+            <td>:active</td>
+            <td>마우스를 눌렀을 때</td>
+        </tr>
+        <tr>
+            <td>:focus</td>
+            <td>포커싱 되었을 때</td>
+        </tr>
+        <tr>
+            <td>:disabled</td>
+            <td>비활성화된 input</td>
+        </tr>
+        <tr>
+            <td>:enabled</td>
+            <td>활성화된 input</td>
+        </tr>
+        <tr>
+            <td>:checked</td>
+            <td>선택된 checkbox, radio</td>
+        </tr>
+    </table>
+
+    <h2>✅ 가상 요소 선택자</h2>
+    <table>
+        <tr>
+            <th>가상 요소 선택자</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>::before, ::after</td>
+            <td>앞이나 뒤에 가상의 요소 추가</td>
+        </tr>
+        <tr>
+            <td>::first-letter</td>
+            <td>첫 번째 글자</td>
+        </tr>
+        <tr>
+            <td>::first-line</td>
+            <td>첫 번째 라인</td>
+        </tr>
+        <tr>
+            <td>::selection</td>
+            <td>선택한 영역</td>
+        </tr>
+    </table>
+
+    <h2>✅ 상속과 우선 순위</h2>
+    <h3>1️⃣ 상속</h3>
+    <p>부모 요소의 스타일이 자식 요소에 상속됨.</p>
+    <h3>2️⃣ 우선 순위</h3>
+    <p>선언된 위치, 코드 위치, Specificity(명시도)에 따라 우선순위 결정.</p>
+
+    <h2>✅ 레이아웃</h2>
+    <h3>1️⃣ display</h3>
+    <ul>
+        <li>inline: 콘텐츠 크기로 영역 설정, width/height 지정 불가</li>
+        <li>block: width/height 지정 가능, 가로줄 전체 차지</li>
+        <li>inline-block: width/height 지정 가능, 가로방향 추가</li>
+        <li>none: 요소 숨기기</li>
+    </ul>
+
+    <h3>2️⃣ float</h3>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>left</td>
+            <td>왼쪽에 뜨도록</td>
+        </tr>
+        <tr>
+            <td>right</td>
+            <td>오른쪽에 뜨도록</td>
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>정렬하지 않음</td>
+        </tr>
+        <tr>
+            <td>inherit</td>
+            <td>부모의 float 값 상속</td>
+        </tr>
+    </table>
+
+    <h3>3️⃣ position</h3>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>static</td>
+            <td>기본값</td>
+        </tr>
+        <tr>
+            <td>relative</td>
+            <td>기준 설정</td>
+        </tr>
+        <tr>
+            <td>absolute</td>
+            <td>문서 흐름에서 제거, relative 기준</td>
+        </tr>
+        <tr>
+            <td>sticky</td>
+            <td>스크롤에 따라 고정</td>
+        </tr>
+        <tr>
+            <td>fixed</td>
+            <td>화면 위치에 고정</td>
+        </tr>
+    </table>
+
+    <h3>4️⃣ z-index</h3>
+    <p>요소가 겹칠 때, 어떤 요소가 제일 위로 올지 설정 (position 필요).</p>
+
+    <h3>5️⃣ overflow</h3>
+    <table>
+        <tr>
+            <th>속성값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>visible</td>
+            <td>넘치면 깨져 보임</td>
+        </tr>
+        <tr>
+            <td>hidden</td>
+            <td>넘치는 콘텐츠 숨김</td>
+        </tr>
+        <tr>
+            <td>scroll</td>
+            <td>스크롤로 볼 수 있음</td>
+        </tr>
+        <tr>
+            <td>auto</td>
+            <td>브라우저가 자동 선택</td>
+        </tr>
+    </table>
+</body>
+
+</html>

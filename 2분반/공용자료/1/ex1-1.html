@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Matching and Validation</title>
+  </head>
+  <body>
+    <h1>Password Matching and Validation</h1>
+    <label for="password">Password:</label>
+    <input type="password" id="password" onkeyup="validatePassword()" />
+    <br />
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" onkeyup="validatePassword()" />
+    <p id="message"></p>
+
+    <script>
+      // TODO: 아래 validatePassword함수를 완성하세요.
+      const validatePassword = () => {
+        // Hint: 아래 함수들은 비밀번호가 일치하는지 확인하는데 사용할 수 있습니다.
+        console.log(/[A-Z]/.test("aAa1")); // true
+        console.log(/[A-Z]/.test("aaa")); // false
+        console.log(/[a-z]/.test("AaA")); // true
+        console.log(/[a-z]/.test("AAA32")); // false
+        console.log(/[0-9]/.test("132")); // true
+        console.log(/[0-9]/.test("ABCabc")); // false
+      };
+    </script>
+  </body>
+</html>
