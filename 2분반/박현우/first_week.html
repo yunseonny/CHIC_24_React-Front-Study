@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> week 1</title>
+</head>
+<body>
+    
+        <h1>HTML 기본 태그</h1>
+        </hr><hr>
+        <h4>글자 태그</h4>
+        <p>h1~h6 : 제목 글자 생성</p>
+        <p>p,br,hr: 본문 생성</p>
+        </hr><hr>
+        <h4>앵커 태그</h4>
+        <p>a : 하이퍼링크 생성</p>
+        <p>small,sub,sup,ins,del</p>
+        </hr><hr>   
+        <h4>목록 태그</h4>
+        <p>ul/ol,li : 순서가 없는/있는 목록 생성, 목록 요소 생성</p>
+        </hr><hr>
+        <h4>테이블 태그</h4>
+        <p>table,tr,th,td: 표 생성</p>
+        </hr><hr>
+        <h4>미디어 태그</h4>
+        <p>img 태그(src,alt,width,height)</p>
+        <p>audio,video 태그(src,preload,autoplay,controls)</p>
+        <p>video 태그(width,height)</p>
+        </hr><hr>
+        <h4>입력 양식 태그</h4>
+        <p>form 태그로 영역을 생성하고, 내부에 input 태그를 넣어 만듦.</p>
+        <p>다양한 입력 양식 태그 : text, button, checkbox, file, hidden, image, password, radio, reset, submit, select+option</p>
+        </hr><hr>
+        <h1>HTML5 문서 구조화</h1>
+        <h4>공간 분할 태그</h4>
+        <p>공간을 분할해야 CSS로 원하는 레이아웃을 구성할 수 있음.</p>
+        <p>div : 블록형식으로 공간 분할</p>
+        <p>span : 인라인 형식으로 공간 분할</p>
+        <h4>시멘틱 태그</h4>
+        <img src="sementic_tag.png" alt="sementic_tag" width="300">
+    </hr><hr>
+    <h1>CSS 3 기초: 선택자와 단위</h1>
+    <p>CSS3에서 특정 HTML 태그를 선택할 때는 선택자를 사용</p>
+    <p>style 태그 내부에 CSS 블록을 입력해 작성한 코드를 스타일시트라고 함.</p>
+    <h4>기본 선택자</h4>
+    <p> 전체 선택자 *</p>
+    <p> 태그 선택자 태그</p>
+    <p> 아이디 선택자 #아이디</p>
+    <p> 클래스 선택자 .클래스</p>
+    <h4>속성 선택자</h4>
+    <p>선택자[속성]: 특정한 속성이 있는 태그 선택</p>
+    <p>선택자[속성 = 값]: 특정한 속성 내부 값이 특정 값과 같은 태그 선택</p>
+    <h4>후손 선택자와 자손 선택자</h4>
+    <p>후손 선택자: 특정한 태그의 후손을 선택할 때 사용</p>
+    <p>선택자A 선택자B: 선택자A의 후손인 선택자B 선택</p>
+    <p>자손 선택자: 특정한 태그의 자손을 선택할 때 사용</p>
+    <p>선택자A > 선택자B: 선택자A의 자손인 선택자B 선택</p>
+    <h4>반응 - 상태 - 구조 선택자</h4>
+    <p>반응 선택자: 사용자 반응으로 생성되는 특정한 상태를 선택</p>
+    <p>사용자가 특정 태그 위에 마우스 커서를 올리면 hover 상태</p>
+    <p>사용자가 특정 태그를 마우스로 클릭하면 active 상태</p>
+    <p>상태 선택자: 입력 양식의 상태를 선택할 때 사용</p>
+    <p>:checked, :focus, :enabled, :disabled</p>
+    <p>구조 선택자: 특정한 위치에 있는 태그를 선택할 때 사용</p>
+    <p>first-child : 형제 관계에서 첫 번째로 등장하는 태그 선택</p>
+    <p>last-child : 형제 관계에서 첫 번째로 등장하는 태그 선택</p>
+    <p>nth-child : 형제 관계에서 앞에서 수열 번째로 등장하는 태그 선택</p>
+    <p>nth-last-child : 형제 관계에서 뒤에서 수열 번째로 등장하는 태그 선택</p>
+    </hr><hr>
+    <h1>CSS 3 속성</h1>
+    <h4>박스 속성</h4>
+    <p>margin 속성, border 속성, padding 속성, width 속성, height 속성을 모두 합쳐 박스 속성이라 함.</p>
+    <p>border-radius : 모서리를 둥근 박스 테두리로 만듦.</p>
+    <h4>가시 속성</h4>
+    <p>가시 속성: 태그가 화면에 보이는 방식을 지정. 대표적으로 display 속성.</p>
+    <p>키워드: none, block, inline, inline-block</p>
+    <h4>배경 속성</h4>
+    <p>배경 속성: 배경의 이미지나 색상의 지정.</p>
+    <p>속성: background-image, background-size, background-repeat, background-attachment, background-position, background</p>
+    <h4>글자 속성</h4>
+    <p>font-size(크기), font-family(글꼴) font-style(기울기), font-weight(글자 두께), text-align(글자 정렬)</p>
+    <h4>위치 속성</h4>
+    <p>position: absolute, fixed, relative, static</p>
+    <h4>유동 속성</h4>
+    <p>float: left/right</p>
+    <h4>그림자와 그레이디언트 속성</h4>
+    <p>그림자 속성: text_shadow, box-shadow</p>
+    <p>그레이디언트 속성: 툴 사용..</p>
+    </hr><hr>
+    <h1>다양한 레이아웃의 구성과 기능</h1>
+    <h4>수평,중앙, One True 정렬 레이아웃</h4>
+    <p>수평 정렬 레이아웃: (네이버 사이트의 광고,뉴스스탠드와 로그인,날씨는 수평 정렬 되어 있음)</p>
+    <p>대부분의 경우: 자손에게 float 속성을 지정하고, 부모의 overflow 속성에는 hidden 키워드를 적용</p>
+    <p>중앙 정렬 레이아웃: 중앙 정렬하고 싶은 태그에 width 속성을 부여하고 margin 속성을 '0 auto'로 입력</p>
+    <p>One True 레이아웃: 국내 포털 사이트의 모든 메인 페이지</p>
+    <img src="One_True_Layout.png" alt="One_True_Layout" width="300">
+    <p>One True Layout 구성하기: 1. 행 구성하기 2. 열 구성하기 3. 레이아웃 구성하기</p>
+    <h4>요소 배치</h4>
+    <p>절대 위치를 사용한 요소 배치: 자손의 position 속성에 absolute를 적용하려면 부모의 position 속성에 relative를 적용</p>
+    <p>요소를 중앙에 배치: 1. 중앙 정렬하려는 div 태그의 position 속성을 absolute로 지정 2. left 속성과 top 속성을 모두 50%로 지정 3. 중앙에 정렬하려는 div 태그의 margin-left 속성과 margin-top 속성에 음수 입력(div 태그 너비와 높이의 절반)</p>
+    <p>요소를 고정 위치에 배치: position 스타일 속성에 fixed를 적용하고 left,top,right,botton 속성에 값을 입력해 위치를 설정.</p>
+    <h4>글자 생략</h4>
+    <p>-> ellipsis 클래스 생성</p>
+    <h1>반응형 웹</h1>
+    <p> 반응형 웹: 웹 페이지 하나로도 데스크톱, 태블릿 PC, 스마트폰에 맞게 디자인이 자동으로 반응해서 변경되는 웹 페이지. 미디어 쿼리를 사용해 개발</p>
+    <h4> 반응형 웹을 위한 설정</h4>
+    <p>1. 뷰포트 설정</p>
+    <p>2. 미디어 쿼리 설정</p>
+    <p>3. 스마트폰 태블릿 PC, 데스크톱 구분</p>
+    
+
+    
+    
+</body>
+</html>
