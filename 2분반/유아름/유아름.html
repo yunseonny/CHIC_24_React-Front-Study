@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>나를 소개할게요</h1>
+    이름: 유아름<br>
+    
+    01 HTML 기본 용어 
+    2-1 생성 방법에 따른 요소 구분 
+    내용을 가질 수 있는 요소 / <요소 이름>내용</요소이름> 
+    내용을 가질 수 없는 요소 / <요소 이름>
+
+    2-2 내용 예 
+    텍스트인 경우 
+    <h1>Hello HTML5</h1>
+    <p>즐거운 웹 프로그래밍 입문</p>
+
+    다른 태그인 경우 
+    <div>
+        <h1>Hello HTML5</h1>
+        <p>즐거운 웹 프로그래밍 입문</p>
+    </div>
+
+    내용을 입력하지 않은 경우 
+    <div></div>
+    <audio></audio>
+    <video></video>
+
+    2-3 html 태그의 lang 속성
+    lang 속성 값- 언어
+    ko- 한국어
+    en- 영어 
+    ja- 일본어 
+    ru- 러시아어 
+    zh- 중국어 
+    de- 독일어 
+
+    2-4 head 태그 내부에 넣을 수 있는 태그 
+    태그- 설명
+    meta- 웹 페이지에 추가 정보 전달 
+    title- 페이지 제목 지정
+    script- 웹 페이지에 스크립트 추가 
+    link- 웹 페이지에 다른 파일 추가 
+    style- 웹 페이지에 스타일시트 추가 
+    base- 웹 페이지의 기본 경로 지정 
+
+    3-1 제목 글자 태그 
+    태그- 설명 
+    제목 글자
+    h1- 첫 번째로 큰 제목 글자 생성 
+    h2- 두 번째로 큰 제목 글자 생성 
+    h3- 세 번째로 큰 제목 글자 생성
+    h4- 네 번째로 큰 제목 글자 생성 
+    h5- 다섯 번째로 큰 제목 글자 생성 
+    h6- 여섯 번째로 큰 제목 글자 생성
+
+    본문 글자 
+    p- 본문 문단 생성 
+    br- 줄 바꿈
+    hr- 수평 줄 삽입 
+
+    특수 문자 표기 
+    특수 문자- 출력 문자 
+    &nbsp;- 공백 
+    &lt;- <
+    &gt;- >
+    &amp;- &
+
+    3-2 앵커 태그 
+    태그- 설명
+    a- 하이퍼링크 생성 
+
+    3-3 글자 모양 태그 
+    태그- 설명 
+    b- 굵은 글자 
+    i- 기울어진 글자 
+    small- 작은 글자 
+    sub- 아래 첨자 
+    sup- 위 첨자 
+    ins- 밑줄 글자 
+    del- 취소선이 그어진 글자 
+
+    3-4 목록 태그 
+    태그- 설명 
+    ul- 순서가 없는 목록 생성 
+    ol- 순서가 있는 목록 생성 
+    li- 목록 요소 생성 
+
+    3-5 테이블 태그 
+    태그- 설명
+    table- 표 삽입 
+    tr- 표에 행 삽입 
+    tn- 표에 제목 셀 생성 
+    td- 표의 일반 셍 생성 
+
+    3-6 테이블 태그의 속성 
+    태그- 속성- 설명 
+    table- border- 표의 테두리 두께 지정 
+    tn,td- colspan- 셀의 너비 지정 
+         - rowspan- 셀의 높이 지정
+
+    3-7 미디어 태그 구분 
+    내용물을 가질 수 있는 태그- <audio></audio>, <video></video>
+    내용물을 가질 수 없는 태그- <img>
+
+    3-8 이미지, 오디오, 비디오 태그의 속성 
+    
+    태그- img 태그 
+    속성 - 설명 
+    src- 이미지의 경로 지정 
+    alt- 이미지가 없을 때 나오는 글자 지정 
+    width- 이미지의 너비 지정 
+    height- 이미지의 높이 지정 
+
+    태그- audio, video 태그 
+    scr- 음악, 비디오 파일의 경로 지정 
+    preload- 음악, 비디오를 준비 중일 때 데이터를 모두 불러올지 여부를 결정 
+    autoplay- 음악, 비디오의 자동 재생 여부 지정 
+    loop- 음악, 비디오의 반복 여부 지정 
+    controls- 음악, 비디오 재생 도구 출력 여부 지정
+
+    태그- video 태그 
+    width- 비디오의 너비 지정 
+    height- 비디오의 높이 지정 
+
+    4-1 입력 양식 태그 
+    태그-form
+    속성- 설명
+    보이지 않음- 입력 양식의 시작과 끝 표시 
+    
+    태그- input 
+    속성- 설명
+    text- 글자 입력 양식 생성 
+    button- 버튼 생성
+    checkbox- 체크 박스 생성 
+    file- 파일 입력 양식 생성 
+    hidden- 해당 내용 표시 안 함
+    image- 이미지 형태 생성 
+    password- 비밀번호 입력 양식 생성 
+    radio- 라디오 버튼 생성 
+    reset- 초기화 버튼 생성 
+    submit- 제출 버튼 생성 
+
+    태그- textarea
+    속성- 설명 
+    cols/rows- 여러 행의 글자 입력 양식 생성, cols는 너비를 지정하고 rows는 높이를 지정 
+
+    태그- select- 선택 양식 생성 
+    optgroup- 옵션 그룹화 
+    option- 옵션 생성 
+
+    fieldset- 입력 양식의 그룹 지정 
+    legend- 입력 양식 그룹의 이름 지정 
+
+    4-2 기본 공간 분할 태그 
+    태그- 설명
+    div- 블록 형식으로 공간 분할
+    span- 인라인 형식으로 공간 분할 
+
+    블록 형식 태그- 인라인 형식 태그 
+    div 태그- span 태그 
+    h1~h6 태그- a 태그 
+    p 태그- input 태그 
+    목록 태그- 글자 형식 태그 
+    테이블 태그- 입력 양식 태그 
+
+    5-2 기본 선택자 
+    종류- 형태- 설명 
+    전체 선택자- *- HTML 페이지 내부의 태그를 모두 선택 
+    태그 선택자- 태그- HTML 페이지 내부의 특정 태그를 모두 선택
+    아이디 선택자- #아이디- 특정 id 속성이 있는 태그 선택, 웹 표준에 id 속성은 웹 페이지 내부에서 중복되면 안 된다는 규정이 있으므로 아이디 선택자는 특정 태그 하나를 선택할 때 사용
+    클래스 선택자- .클래스- 특정 클래스가 있는 태그 선택
+
+    5-3 속성 선택자 
+    형태- 설명
+    선택자[속성]- 특정한 속성이 있는 태그 선택 
+    선택지[속성=값]- 특정한 속성 내부 값이 특정 값과 같은 태그 선택 
+
+    5-4 후손 선택자 
+    형태- 설명
+    선택자A 선택자B- 선택자A의 후손인 선택지 B선택
+
+    5-5 자손 선택자 
+    형태- 설명
+    선택자A> 선택자B- 선택자A의 자손인 선택지B 선택 
+
+    5-6 반응 선택자 
+    형태- 설명
+    :active- 사용자가 마우스로 클릭한 태그 선택 
+    :hover- 사용자가 마우스 커서를 올린 태그 선택
+
+    5-7 상태 선택자
+    :checked- 체크 상태의 input 태그 선택 
+    :focus- 포커스를 맞춘 input 태그 선택 
+    :enabled- 사용 가능한 input 태그 선택 
+    :disabled- 사용 불가능한 input 태그 선택 
+
+    5-9 구조 선택자
+    형태- 설명
+    :first-child- 형제 관계에서 첫 번째로 등장하는 태그 선택 
+    :last-child- 형제 관계에서 마지막으로 등장하는 태그 선택 
+    :nth-child(수열)- 형제 관계에서 앞에서 수열 번째로 등장하는 태그 선택 
+    :nth-last-child(수열)- 형제 관계에서 뒤에서 수열 번째로 등장하는 태그 선택 
+    
+    5-10 크기 단위 
+    단위- 설명
+    %- 백분율 단위 
+    em- 배수 단위 
+    px- 픽셀 단위 
+
+    5-11 색상 단위
+    RGB 색상 
+    형태- rgb(red,green,blue)
+    설명- R(빨간색)과 G(초록색)와 B(파란색)를 조합해 색상을 표현하며, 0부터 255 사이의 숫자를 입력합니다. 
+    예- <style>
+            h1{background-color:rgb(255,255,255);}
+        </style>
+
+    RGBA 색상
+    형태- rgb(green,blue,alpha)
+    설명- RGB 색상 단위에 알파 값을 추가한 형태입니다. 알파 값은 투명도를 나타내며, 0.0부터 1.0사이의 숫자를 입력합니다. 0.0은 완전 투명 상태이고, 1.0은 완전 불투명 상태입니다. 
+    예- <style>
+            h1{background-color: rgba(255,255,0.5);}
+        </style>
+
+    HEX코드
+    형태- #000000
+    설명- RGB 색상 단위를 짧게 입력하는 방법으로 RGB 색상 조합을 #000000rkxdms 16진수로 입력합니다. 
+    예- <style>
+            h1{background-color: #0094FF;}
+        </style>
+
+    6-1 margin 속성과 padding 속성의 방향 적용
+    속성- 설명 
+    margin-left - 왼쪽 여백
+    margin-right - 오른쪽 여백 
+    margin-top - 위쪽 여백 
+    margin-bottom - 아래쪽 여백
+    padding-left - 왼쪽 패딩 
+    padding-right - 오른쪽 패딩 
+    padding-top - 위쪽 패딩 
+    padding-bottom - 아래쪽 패딩 
+
+    6-2 주로 사용하는 배경 속성
+    속성- 설명
+    background-image - 배경 이미지 삽입
+    background-size - 배경 이미지의 크기 지정
+    background-repeat- 배경 이미지의 반복 형태 지정 
+    background-attachment - 배경 이미지의 부착 형태 지정
+    background-한 번에 모든 배경 속성 입력 
+
+    position 속성과 키워드 
+    키워드- 설명
+    absolute- 절대 위치 좌표 설정
+    fixed- 화면을 기준으로 절대 위치 좌표 설정
+    relative- 초기 위치에서 상하좌우로 위치 이동
+    static- 위쪽에서 아래쪽으로 순서대로 배치 
+
+    6-4 overflow 속성 키워드 
+    키워드- 설명
+    hidden- 영역을 벗어나는 부분 감춤
+    scroll- 영역을 벗어나는 부분을 스크롤로 만듦
+
+    8-1 viewpoint meta 태그에 입력할 수 있는 값
+    값- 설명- 예
+    width- 화면 너비- width=240
+    height- 화면 높이- height=800
+    intial- 초기 확대 비율- intial-scale=2.0
+    user-scalable- 확대 및 축소 기능 여부- user-scalable= no
+    minium-scale- 최소 축소 비율- minimun-scale=1.0
+    maxium-scale- 최대 확대 비율- maxium-scale=2.0
+    target-densitydpi- DPI- target-densitydpi=medium-dpi
+
+    8-2 지원하는 미디어 타입
+    미디어 타입- 설명
+    all- 모든 장치 
+    aural- 음성 장치 
+    braile- 표시 전용 점자 장치 
+    handheld- 손으로 들고 다니는 작은 장치 
+    print- 프린터 
+    projection- 프로젝터 
+    screen- 화면
+    tty- 터미널 등 그림을 띄울 수 없는 장치 
+    tv- 텔레비전
+    embosse- 인쇄 전용 점자 장치 
+
+    8-3 미디어 타입 연산자 
+    only- '해당 장치에서만'을 나타냄
+    not- '해당 장치를 제외한'을 나타냄
+
+    8-4 미디어 특징 
+    width- 화면 너비 
+    height- 화면 높이
+    device-width- 장치 너비 
+    device-height- 장치 높이 
+    orientation- 장치 방향
+    device-aspect-ratio- 화면 비율
+    color- 장치 색상 비트 
+    color-index- 장치에서 표현 가능한 최대 색상 개수 
+    monichrome- 흑백 장치의 픽셀당 비트 개수 
+    resolution- 장치 해상도 
+
+    
+
+    3-1 제목 글
+</body>
+</html>+*/
