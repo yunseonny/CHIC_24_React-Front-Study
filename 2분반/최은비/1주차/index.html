@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML&CSS 정리</title>
+</head>
+
+<body>
+    <section>
+        <h2>HTML이란?</h2>
+        <p>웹 문서를 만들기 위하여 사용하는 기본적인 웹 언어의 한 종류이다. 하이퍼텍스트를 작성하기 위해 개발되었다.
+        </p>
+
+
+        <h2>HTML5 기본 용어 정리</h2>
+        <ul>
+            <li>태그와 요소</li>
+            <ul>
+                <li>HTML 페이지를 구성하는 각 부품을 요소라고 함</li>
+                <li>태그는 이러한 요소를 만들 때 사용하는 작성 방법</li>
+            </ul>
+            <li>속성</li>
+            <ul>
+                <li>태그에 추가 정보를 부여할 때 사용</li>
+            </ul>
+            <li>주석</li>
+            <ul>
+                <li>프로그램 실행에 영향을 미치지 않고 설명용으로 사용하는 코드</li>
+            </ul>
+        </ul>
+
+
+        <h2>HTML5 태그</h2>
+        <ul>
+            <li>head 태그 내부에 넣을 수 있는 태그
+                <ul>
+                    <li>meta : 웹 페이지에 추가 정보 전달</li>
+                    <li>title : 페이지 제목 지정</li>
+                    <li>script : 웹 페이지에 스크립트 추가</li>
+                    <li>link : 웹 페이지에 다른 파일 추가</li>
+                    <li>style : 웹 페이지에 스타일시트 추가</li>
+                    <li>base : 웹 페이지의 기본 경로 지정</li>
+                </ul>
+            </li>
+
+            <br>
+
+            <li>body 태그 내부에 자주 쓰는 태그</li>
+            <ul>
+                <li>h1~h6 : 제목 요소</li>
+                <li>p : 단락 나누기</li>
+                <li>br : 줄 바꿈</li>
+                <li>strong : 중요 텍스트 강조</li>
+                <li> a : 하이퍼링크 생성</li>
+                <li>img : 이미지 생성</li>
+                <li>nav : 내비게이션</li>
+            </ul>
+            </li>
+
+            <br>
+
+            <li>특수문자 표기(& _ ;)
+                <ul>
+                    <li> nbsp : 공백</li>
+                    <li> lt : &lt;</li>
+                    <li> gt : &gt;</li>
+                    <li> amp : &amp;</li>
+                </ul>
+            </li>
+
+            <br>
+
+            <li>입력 태그
+                <ul>
+                    <li>text : 글자 입력 양식 생성</li>
+                    <li>button : 버튼 생성</li>
+                    <li>checkbox : 표의 제목 셀 생성</li>
+                    <li>file : 파일 입력 양식 생성</li>
+                </ul>
+            </li>
+
+            <br>
+
+            <li>공부하면서 처음 알게된 것
+                <ul>
+                    <li>table : 표 삽입</li>
+                    <li>tr : 표에 행 삽입</li>
+                    <li>th : 표의 제목 셀 생성</li>
+                    <li>td : 표의 일반 셀 생성</li>
+                </ul>
+            </li>
+
+            <br>
+
+        </ul>
+    </section>
+
+    <section>
+        <h2>CSS란?</h2>
+        <p> 웹 문서의 전반적인 스타일을 미리 저장해 둔 스타일시트이다. 문서 전체의 일관성을 유지할 수 있고, 세세한 스타일 지정의 필요를 줄어들게 하였다.</p>
+
+        <h2>CSS 선택자 종류</h2>
+        <ul>
+            <li>전체 선택자 : * </li>
+            <li>태그 선택자 : 태그 </li>
+            <li>아이디 선택자 : #아이디</li>
+            <li>클래스 선택자 : .클래스</li>
+            <li>후손 선택자 : 선택자 선택자</li>
+        </ul>
+
+        <h2>CSS 주요 태그</h2>
+        <ul>
+            <li>박스
+                <ul>
+                    <li>margin : 요소 외부의 여백 설정</li>
+                    <li>border : 요소의 테두리 설정</li>
+                    <li>padding : 요소 내부의 여백 설정</li>
+                    <li>width : 요소의 너비 설정</li>
+                    <li>height: 요소의 높이 설정</li>
+                </ul>
+            </li>
+
+            <li>배치
+                <ul>
+                    <li>display : 요소의 박스 형식 설정</li>
+                    <li>position : 요소의 위치 설정</li>
+                    <li>float : 요소를 좌우로 정렬</li>
+                    <li>width : 요소의 너비 설정</li>
+                    <li>flex : 플렉스 박스 레이아웃 설정</li>
+                </ul>
+            </li>
+
+            <li>텍스트
+                <ul>
+                    <li>color : 텍스트 색상 설정</li>
+                    <li>font-size: 텍스트 크기 설정</li>
+                    <li>text-align : 텍스트 정렬 설정</li>
+                    <li>line-height : 텍스트 줄 간격 설정</li>
+                </ul>
+            </li>
+
+            <li>배경
+                <ul>
+                    <li>background-color : 배경 색상 설정</li>
+                    <li>background-image : 배경 이미지 설정</li>
+                    <li>background-size : 배경 이미지 크기 설정</li>
+                    <li>background-position : 배경 이미지 위치 설정</li>
+                </ul>
+            </li>
+
+            <li>기타
+                <ul>
+                    <li>opacity: 요소의 투명도 설정</li>
+                    <li>border-radius : 테두리 둥글게 만들기</li>
+                    <li>font-family : 글꼴 설정</li>
+                    <li>text-shadow : 텍스트 그림자 설정</li>
+                    <li>overflow : 넘치는 콘텐츠 처리 방법 설정</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>반응형 웹이란?</h2>
+        <p>웹 페이지 하나로도 데스크톱, 태블릿PC, 스마트폰에 맞게 디자인이 자동으로 반응해서 변경되는 웹 페이지를 의미한다. 반응형 웹 페이지는 미디어 쿼리를 사용해 개발한다.</p>
+        <p>@media 를 이용하여 쓴다</p>
+
+        <h2>반응형 웹</h2>
+
+        <ul>
+            <li>유동적인 그리드 레이아웃 : 웹 페이지 요소들이 상대적인 단위(%)로 크기를 지정하여, 화면 크기에 따라 유연하게 조정</li>
+            <li>미디어 쿼리 : 특정 화면 크기나 장치 유형에 따라 스타일 시트를 조건부로 적용</li>
+            <li>모바일 최적화 : 모든 장치에서 동일한 콘텐츠에 접근하고, 일관된 인터페이스를 제공하여 사용자의 혼란을 줄임</li>
+        </ul>
+    </section>
+</body>
+
+</html>
