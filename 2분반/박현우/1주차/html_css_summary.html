@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href = "style.css">
+
+    <title>React Study</title>
+</head>
+<body>
+    <h2>웹 사이트의 생성: HTML과 CSS</h2>
+    
+    <ul>
+        <li>HTML : 어디에 무엇이 있는지 정의, 웹 사이트의 구조</li>
+        <li>CSS : 사이트의 구성요소들이 어떻게 생겼는지</li>
+        ※ HTML : 뼈대 CSS: 그 위에 덧입힘
+    </ul>
+    
+    <h3>HTML</h3>
+    <ul>
+        <li>HEAD : html이라는 언어를 이해할 수 있는 능력(기본 프레임)을 머리에 넣어준 것. 문서 정체의 정보.</li>
+        <li>BODY: 실제 구성요소. 눈으로 확인할 수 있는 부분들</li>
+        
+    </ul>
+
+
+    <h4>HTML 기본 태그</h4>
+
+    <ul>
+        <li>h1 ~ h5 : 제목</li>
+        <li>p : 본문</li>
+        <li>br: 줄바꿈</li>
+        <li>a: 링크</li>
+        <li>li: list </li>
+        <li>ul: unordered list </li>
+        <li>ol: ordered list   </li>
+        <li>img: 이미지 삽입   </li>
+        <li>input: 사용자로부터 입력을 받음. 다양한 attribute 있음<br><a href = "https://www.w3schools.com/tags/att_input_type.asp" target="_blank">input attribute 목록</a></li>
+        <li>strong : 글자의 강조 </li>
+        <li>i: 글자를 이텔릭체로 변경   </li>
+        <a href ="https://www.advancedwebranking.com/seo/html-study" target="_blank">HTML 주요 태그 정리</a>
+    </ul>
+<hr>
+    <h3>CSS : Cascading Style Sheets</h3>
+<p id="css_structure">CSS의 기본구조 : selector{property: value;}</p>
+
+    <ul>
+        <li>Selector: 어떤 요소에 적용할지</li>
+        <li>Property: 어떤 스타일, 어떤 서식을 적용할지</li>
+        <li>value: (변화할)형태</li>
+        <li>/**/: 주석</li>
+        </ul>
+<h4>- HTML에서 CSS 사용하기</h4>
+<ol>
+    <li>style /style - 태그 사용하기</li>
+    <li>Style = “;” 이용하기</li>
+    <li id="css_usual">style.css 파일 연동시키기 - 주로 사용</li>
+</ol>
+
+<h4>CSS의 Cascading</h4>
+<p>웹 브라우저 기본 스타일 -> 외부/내부 스타일 시트 -> 인라인 스타일(우선)</p>
+
+<h4>selecter의 종류</h4>
+<ul>
+<li>
+    type 선택자
+</li>
+<li>
+    attribute 선택자
+</li>
+<li>
+    id 선택자
+</li>
+<li>
+    class 선택자
+</li>
+<li>
+    그룹 선택자
+</li>
+<li>
+    가상 선택자
+</li>
+</ul>
+
+<h4>대표적인 가상선택자</h4>
+<ol>
+<li>link : 방문한 적이 없는 링크</li>    
+<li>visited : 방문학 적이 있는 링크</li>
+<li>hover : 마우스를 롤오버 했을 때</li>
+<li>active : 마우스를 클릭했을 때</li>
+<li>포커스 되었을 때(input 태그 등) </li>
+</ol>
+</ul>
+
+<h4>div와 span</h4>
+<ul>
+<li>
+    Div : block element 
+</li>
+<li>
+    Span: in-line element - width와 margin 등이 적용되지 않음.
+</li>
+</ul>
+
+<h4>자주 쓰는 tag들의 css 속성(예시)</h4>
+<ul>
+    <li>Border 1px solid black;</li>    
+    <li>Border-radius:30px;</li>
+    <li>Border-bottom: 0.2px solid sky-blue;</li>
+    <li>Background-color:pink;</li>
+    <li>Background-image:url()
+    </li>
+</ul>
+<h4>text의 css 속성</h4>
+<ul>
+    <li>font-size</li>    
+    <li>color</li>
+    <li>text-align</li>
+    <li>text-decoration</li>
+    <li>text-transform</li>
+    <li>line-height</li>
+    <li>letter-spacing</li>
+</ul>
+
+<ul>
+    <li>font-weight</li>    
+    <li>font-style</li>
+    <li>font-weight</li>
+    <li>font-size</li>
+
+</ul>
+
+<h4>Transform(변형)</h4>
+<a href="http://codepen.io/vineethtrv/pen/XKKEgM">참고 사이트</a>
+<h4>Transition(변화하는 과정을 다루는 것)</h4>
+<ul>
+    <li>Transition-property: all; - transition 할 내용</li>    
+    <li>Transition-duration 1s;(transition :1s;) 시간</li>
+    <li>Transition-delay:1s; 1초 기다렸다가</li>
+    <li>Transition-timing-function:linear; 일정하게 변하게 할지</li>
+    <a href="https://matthewlein.com/tools/ceaser">Transition-timing-function 참고 사이트</a>
+</ul>
+
+</body>
+</html>
+
