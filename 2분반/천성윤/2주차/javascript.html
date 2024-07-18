@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트와 문서 객체 모델(DOM) 기본</title>
+</head>
+
+<body>
+    <h1>자바스크립트와 문서 객체 모델(DOM) 기본</h1>
+
+    <section>
+        <h2>자바스크립트 기본 문법</h2>
+
+        <h3>기본 용어와 출력 방법</h3>
+        <p>자바스크립트는 웹 페이지의 동적 기능을 구현하기 위한 프로그래밍 언어이다. 웹 브라우저에서 실행되며, HTML 문서와 함께 사용된다.</p>
+        <p>콘솔에 출력을 하려면 <code>console.log()</code>를 사용한다. 이는 개발자가 디버깅을 위해 자주 사용하는 방법이다.</p>
+        <pre><code>console.log("Hello, JavaScript!");</code></pre>
+
+        <h3>자료형과 변수형</h3>
+        <p>자바스크립트의 기본 자료형에는 다음과 같은 것들이 있다:</p>
+        <ul>
+            <li><strong>숫자(Number)</strong>: 정수와 실수를 포함한다. 예: <code>let age = 25;</code></li>
+            <li><strong>문자열(String)</strong>: 텍스트 데이터를 포함한다. 예: <code>let name = "Alice";</code></li>
+            <li><strong>불리언(Boolean)</strong>: 참(true)과 거짓(false) 값을 가진다. 예: <code>let isStudent = true;</code></li>
+            <li><strong>null</strong>: 비어 있음을 나타냅니다. 예: <code>let emptyValue = null;</code></li>
+            <li><strong>undefined</strong>: 값이 할당되지 않음을 나타낸다. 예: <code>let notDefined;</code></li>
+            <li><strong>객체(Object)</strong>: 키-값 쌍의 모음이다. 예: <code>let person = { name: "John", age: 30 };</code></li>
+        </ul>
+        <p>변수는 <code>var</code>, <code>let</code>, <code>const</code> 키워드를 사용하여 선언한다. <code>let</code>과
+            <code>const</code>는 블록 범위 변수를 선언하는 반면, <code>var</code>는 함수 범위 변수를 선언한다.
+        </p>
+        <pre><code>
+// 변수 선언
+var oldWay = "이전 방식"; // var
+let modernWay = "최신 방식"; // let
+const constantValue = 3.14; // const (변경 불가)
+        </code></pre>
+
+        <h3>조건문과 반복문</h3>
+        <p>조건문은 특정 조건에 따라 코드 블록을 실행한다. <code>if</code>, <code>else if</code>, <code>else</code> 문을 사용한다.</p>
+        <pre><code>
+// 조건문 예제
+let age = 20;
+
+if (age < 18) {
+    console.log("미성년자이다.");
+} else if (age >= 18 && age < 65) {
+    console.log("성인이다.");
+} else {
+    console.log("노년이다.");
+}
+        </code></pre>
+
+        <p>반복문은 특정 코드 블록을 여러 번 실행한다. <code>for</code>, <code>while</code> 문을 사용한다.</p>
+        <pre><code>
+// for 반복문 예제
+for (let i = 0; i < 5; i++) {
+    console.log("숫자: " + i);
+}
+
+// while 반복문 예제
+let count = 0;
+while (count < 5) {
+    console.log("카운트: " + count);
+    count++;
+}
+        </code></pre>
+
+        <h3>함수</h3>
+        <p>함수는 특정 작업을 수행하는 코드 블록이다. <code>function</code> 키워드를 사용하여 정의한다.</p>
+        <pre><code>
+// 함수 정의
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+// 함수 호출
+console.log(greet("Alice"));
+        </code></pre>
+
+        <h3>객체</h3>
+        <p>객체는 속성(property)과 메서드(method)를 포함하는 데이터 구조이다. 객체는 중괄호 <code>{}</code>를 사용하여 정의한다.</p>
+        <pre><code>
+// 객체 정의
+let person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("Hello, my name is " + this.name);
+    }
+};
+
+// 객체의 메서드 호출
+person.greet();
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>문서 객체 모델(DOM)</h2>
+
+        <h3>문서 객체 모델의 기본 용어와 개념</h3>
+        <p>DOM(Document Object Model)은 HTML 문서를 트리 구조로 표현한 것이다. 각 요소는 객체로 표현되며, 자바스크립트를 사용하여 이러한 요소들을 조작할 수 있다.</p>
+
+        <h3>문서 객체 선택</h3>
+        <p>DOM 요소를 선택하기 위해 다양한 메서드를 사용할 수 있다:</p>
+        <ul>
+            <li><code>document.getElementById</code>: ID를 사용하여 요소를 선택한다.</li>
+            <li><code>document.querySelector</code>: CSS 선택자를 사용하여 첫 번째 요소를 선택한다.</li>
+            <li><code>document.querySelectorAll</code>: CSS 선택자를 사용하여 모든 요소를 선택한다.</li>
+        </ul>
+        <pre><code>
+// 요소 선택
+let elementById = document.getElementById("myElement");
+let elementByClass = document.querySelector(".myClass");
+let elementsByClass = document.querySelectorAll(".myClass");
+        </code></pre>
+
+        <h3>문서 객체 조작</h3>
+        <p>선택한 DOM 요소의 내용이나 스타일을 변경할 수 있다.</p>
+        <pre><code>
+let element = document.getElementById("myElement");
+element.textContent = "새로운 내용"; // 요소의 텍스트 내용 변경
+element.style.color = "red"; // 요소의 스타일 변경
+        </code></pre>
+
+        <h3>이벤트</h3>
+        <p>이벤트는 사용자나 브라우저가 수행할 수 있는 동작이다. 이벤트를 처리하기 위해 이벤트 리스너를 사용할 수 있다. 예를 들어, 클릭 이벤트를 처리할 수 있다.</p>
+        <pre><code>
+let button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("버튼이 클릭되었다!");
+});
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>실습 예제</h2>
+        <p>다음은 위에서 설명한 개념들을 활용한 간단한 실습 예제이다.</p>
+        <button id="myButton">클릭하세요</button>
+        <div id="myElement">이 텍스트는 변경될 것이다.</div>
+        <script>
+            let button = document.getElementById("myButton");
+            let element = document.getElementById("myElement");
+
+            button.addEventListener("click", function () {
+                element.textContent = "버튼이 클릭된 상태!";
+                element.style.color = "blue";
+            });
+        </script>
+    </section>
+</body>
+
+</html>

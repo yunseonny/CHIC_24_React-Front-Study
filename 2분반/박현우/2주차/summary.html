@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Summary</title>
+    
+</head>
+<body>
+    <h1>JavaScript</h1>
+<div id = "Javascript_and_HTML">
+<h2> JavaScript를 사용하는 이유</h2>
+<p id = "reason">HTML의 조작과 변경</p>
+
+<p> document.getElementById('hello').innerHTML = '안녕'; 에서 document : 웹 문서에서 id hello인 html안의 요소를 가져와서 안녕으로 바꿈 </p>
+<p> document.getElementById를 총해서 html요소의 색상, 마진, 패딩 등 모두 바꿀 수 있다 </p>
+</div>
+<div id = "make_UI">
+<h3>UI 만드는 법</h3>
+<p>1. 미리 디자인해놓고 숨김</p>
+<p>2. 버튼 누르거나 하면 보여줌(javascript를 이용하여)</p>
+</div>
+
+<div id = "alertBoxControl">
+<p>
+button onclick = "알림창닫기(); "열기/button
+button onclick = "알림창열기(); "열기/button
+</p>
+</div>
+<div class = "function">
+<h3>function</h3> 
+<p id = "function1">function 알림창열기(){ document.getElementById('alert').style.display = 'block';}<br>
+    function 알림창닫기(){document.getElementById('alert').style.display = 'none';} </p>
+    --함수의 기능 1 : 축약 --
+<p> -- 함수의 기능 2 : 파라미터를 통한 업그레이드 -- 함수 하나로 다양한 기능 실행가능 <br>
+    function 알림창컨트롤(k){ document.getElementById('alert').style.display = k;
+    를 통해 알림창 컨트롤(열기와 닫기)를 모두 제어할 수 있음
+} </p>
+
+</div>
+
+<h3> 흔한 버그 </h3>
+<p> script의 위치(js의 조작 위치)가 html 아래에 있어야 함.</p>
+
+<h3> EventListener </h3>
+<p> -- html을 좀 더 깔끔하게만들기<br>
+    document.getElementById('close').addEventListener('click', function(){})
+   "이 요소가 클릭되면 {}안의 코드를 실행해줘" 
+</p>
+
+<h3> jQuery </h3>
+<p>script를 간편하게 사용하기 위한 툴 <br>
+    $('#test').html('안녕');
+    $('#test').css('color','red');
+    $('#test').attr('src', 'dsddd.jpg');
+같은 방식으로 간편하게 html 조작 가능</p>
+
+</body>
+</html>
