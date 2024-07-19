@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+     <!--UI 만드는 법 1. 미리 디자인해놀고 숨김 2. 버튼누르면 보여줌-->
+    <div class="alert-box" id= "alert">
+        <p id="title">Alert 박스</p>
+    <!-- funtion 안 썼을 때
+    <button onclick="document.getElementById('alert').style.display='block';">열기</button>
+    
+    <button onclick="document.getElementById('alert').style.display='none';">닫기</button>
+    -->
+
+
+    <button id="close">X</button> 
+    </div>    
+
+
+    <button onclick="알림창1열기('아이디입력해')">아이디</button>
+    <button onclick="알림창1열기('비번입력해')">비번</button>
+
+    <h4 id="test">안녕하세요</h4>
+
+
+    
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">올때메로나</h2>
+    <!--변경할 HTML이 있으면 하단에 JS코딩해야 함-->
+    <!--jQuery로 HTML 변경하는 법 $('CSS셀렉터')-->
+    <script>
+       
+        //document.querySelector('#test')
+        //document.getElementById('test').innerHTML= '???';
+        $('#test').css('color','red')
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display='none'
+        });
+
+        function 알림창1열기(구멍){
+            document.getElementById('title').innerHTML=구멍;
+
+            document.getElementById('alert').style.display='block';
+        }
+
+        /*function 알림창2열기(){
+            document.getElementById('title').innerHTML='비번 입력하세요';
+
+            document.getElementById('alert').style.display='block';
+        }*/
+
+
+
+        document.getElementById('hello').innerHTML='안녕';
+        document.getElementById('hello').style.color='red';
+        document.getElementById('hi').innerHTML='올때바밤바';
+        document.getElementById('hello').style.color='blue';
+        document.getElementById('hello').style.fontSize='30px';
+
+
+        /*function 알림창열기(구멍){
+            document.getElementById('alert').style.display= 구멍;
+        }
+
+
+        <!--function 알림창닫기(){
+            document.getElementById('alert').style.display='none';
+        }
+
+        funtion plus(구멍){
+            2 + 구멍
+        }
+
+        plus(1);
+        plus(2);*/
+
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        
+
+    </script>
+
+</body>
+</html>
