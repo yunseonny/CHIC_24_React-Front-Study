@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    /* 화면을 넘어서는 요소의 스크롤을 숨김 */
+}
+
+#shape {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: relative;
+    transform-origin: center;
+    transition: all 0.5s ease;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #3498db;
+    background-color: transparent;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 0;
+}
+
+.star {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+}
+
+.star::before,
+.star::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background: #3498db;
+}
+
+.star::before {
+    transform: translate(-50%, -50%) rotate(35deg);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star::after {
+    transform: translate(-50%, -50%) rotate(-35deg);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+#redShape {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s linear;
+}
+
+#toggleAnimation {
+    position: absolute;
+    bottom: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
