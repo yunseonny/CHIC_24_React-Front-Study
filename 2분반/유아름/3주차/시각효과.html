@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시각효과c</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var intervalId; // 애니메이션 반복 ID 저장 변수
+
+            // 버튼 클릭 시 페이지 숨기기/보이기
+            $('button').click(function() {
+                $('.page').fadeToggle('slow');
+            });
+
+            // #box 스타일과 애니메이션 적용
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'red',
+                position: 'absolute',
+                left: 10,
+                top: 10
+            }).animate({
+                height: '+=100',
+                width: '-=50',
+                left: '+=30',
+                opacity: 0.5
+            }, 500).animate({
+                opacity: 1,
+                left: 100,
+                top: 200
+            }, 500);
+
+            // 변수 선언
+            var clearQueue = false;
+            var goToEnd = false;
+
+            // 체크박스 상태 변경 시 변수 업데이트
+            $('#clearQueue').change(function() {
+                clearQueue = $(this).prop('checked');
+            });
+
+            $('#goToEnd').change(function() {
+                goToEnd = $(this).prop('checked');
+            });
+
+            // Stop 버튼 클릭 시 애니메이션 중지
+            $('#stopButton').click(function() {
+                $('#box').stop(clearQueue, goToEnd);
+                clearInterval(intervalId); // 반복 애니메이션 중지
+            });
+
+            // 타이머를 설정하여 애니메이션 반복
+            intervalId = setInterval(function(){
+                $('#box').animate({
+                    width: 200
+                }, 1000).delay(1000).animate({
+                    width: 100,
+                    height: 100
+                }, 1000);
+            }, 3000);
+        });
+    </script>
+</head>
+<body>
+    <button>Toggle Show</button>
+
+    <div class="page">
+        <h1>고양이 울음소리</h1>
+        <p>냥냐냥</p>
+    </div>
+
+    <div id="box"></div>
+
+    <!-- 입력 양식 -->
+    <label for="clearQueue">clearQueue</label>
+    <input id="clearQueue" type="checkbox">
+    <br>
+    <label for="goToEnd">goToEnd</label>
+    <input id="goToEnd" type="checkbox">
+    <br>
+    <button id="stopButton">Stop</button>
+</body>
+</html>
+
+
+
+
+<!--
+<jQuery 라이브러리의 시각 효과 메서드>
+show(속도): 문서 객체가 커지며 표시 
+hide(속도): 문서 객체가 작아지며 사라짐
+toggle(속도): show()메서드와 hide()메서드를 번갈아 실행
+slideDown(속도): 문서 객체가 슬라이드 효과와 함께 표시 
+slideUP(속도): 문서 객체가 슬라이드 효과와 함께 사라짐
+slideToggle(속도): slideDown()메서드와 slideUp()메서드를 번갈아 실행 
+fadeln(속도): 문서 객체가 선명해지며 표시 
+fadeOut(속도): 문서 객체가 흐려지며 사라짐
+fadeToggle(속도): fadeln()메서드와 fadeOut()메서드를 번갈아 실행
+
+<속도 문자열>
+slow: 600밀리초 속도
+normal: 500밀리초 속도 
+fast: 400밀리초 속도 
+
+1)$(selector).animate(속성 객체);
+2)$(selector).animate(속성 객체, 시간);
+3)$(selector).animate(속성 객체, 시간, 콜백 함수);
+
+<애니메이션 정지 메서드>
+delay(): 애니메이션을 특정 시간만큼 정지 
+stop(): 애니메이션을 완전히 정지 
+-->
