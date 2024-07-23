@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .hover {
+            background-color: blue;
+            border-radius: 50px;
+        }
+
+        .box {
+            float: left;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .shade {
+            height: 2px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 스타일 속성을 변경 
+            $('h1').css('color', 'red');
+            $('h1').css('background', 'black');
+
+            // 속성을 추출
+            var src = $('script').attr('src');
+            alert(src);
+
+            // img 태그 속성 설정
+            $('img').attr({
+                alt: 'jQuery 라이브러리를 사용한 속성 지정',
+                src: 'http://placehold.it/100x100'
+            }).width(100);
+
+            // 예제 11-4 
+            //$('.box').css('float', 'left');
+            //$('.box').css('margin', 10);
+            //$('.box').css('width', 100);
+            //$('.box').css('height', 100);
+            //$('.box').css('backgroundColor', 'red');
+
+            // 코드 11-9
+            $('.box').css({
+                float: 'left',
+                margin: 10,
+                width: 100,
+                height: 100,
+                backgroundColor: 'red'
+            });
+
+            var output = '';
+            for (var i = 0; i < 256; i++) {
+                output += '<div class="shade"></div>';
+            }
+            $('body').append(output);
+
+            $('div.shade').css({
+                height: 2,
+                backgroundColor: function(i) {
+                    return 'rgb(' + i + ',' + i + ',' + i + ')';
+                }
+            });
+
+            // Hover 이벤트 설정
+            $('#box').hover(
+                function() {
+                    // 스타일 변경
+                    $(this).addClass('hover');
+                }, 
+                function() {
+                    // 스타일 변경
+                    $(this).removeClass('hover');
+                }
+            );
+
+            // h1 hover 이벤트 연결
+            $('h1').hover(
+                function() {
+                    // 색상 변경
+                    $(this).css({
+                        background: 'red',
+                        color: 'white'
+                    });
+                },
+                function() {
+                    // 색상 제거
+                    $(this).css({
+                        background: '',
+                        color: ''
+                    });
+                }
+            );
+
+            // h1 click 이벤트 연결
+            $('h1').click(function() {
+                alert('클릭!');
+            });
+     
+            // Additional event handlers for #box
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'orange'
+            }).on('click', function() {
+                $(this).css('background', 'red');
+            }).on('mouseenter', function() {
+                $(this).css('background', 'blue');
+            }).on('mouseleave', function() {
+                $(this).css('background', 'orange');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>공부하자</h1>
+    <h1>jQuery</h1>
+    <img>
+    <div id="box"></div> <!-- Ensure unique ID -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <h1>Click</h1>
+</body>
+
+
+    
+    <!--
+    attr(): 문서 객체의 속성 조작
+    html(): 문서 객체 내부의 HTML 태그 조작 
+    text(): 문서 객체 내부의 글자 조작
+    addClass(): 클래스 추가
+    removeClass(): 클래스 제거 
+    toggleClass(): 클래스 전환
+    on(): 이벤트 연결
+    off(): 이벤트 제거
+    -->
+
+    </html>

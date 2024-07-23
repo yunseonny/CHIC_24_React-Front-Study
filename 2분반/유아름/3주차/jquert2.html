@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        input {
+            width: 50px;
+            text-align: center;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input1" maxlength="6">
+    <span>-</span>
+    <input type="text" id="input2" maxlength="7">
+
+    <script>
+        $(document).ready(function() {
+            // 첫 번째 입력 필드의 입력 이벤트 처리
+            $('#input1').on('input', function() {
+                // 입력값 길이가 6자를 초과하면 두 번째 입력 필드로 포커스 이동
+                if ($(this).val().length >= 6) {
+                    $('#input2').focus();
+                }
+            });
+
+            // 두 번째 입력 필드의 키다운 이벤트 처리
+            $('#input2').on('keydown', function(event) {
+                // 백스페이스 키가 눌리고 입력값이 없을 때 첫 번째 입력 필드로 포커스 이동
+                if (event.key === 'Backspace' && $(this).val().length === 0) {
+                    $('#input1').focus();
+                }
+            });
+
+            var appenDocument = function(){
+                for (var i= 0; i<20; i++){
+                    //문서 객체 생성
+                    $('<h1>Infinity Scroll</h1>').appendTo('body');
+                }
+            };
+
+            //초기에 문서 객체 추가
+            appenDocument();
+
+            //이벤트 연결
+            $(window).scroll(function (){
+                //변수 선언 
+                var scrollHeight= $(window).scrollTop() + $(window).height();
+                var documentHeight= $(document).height();
+
+                //검사
+                if (scrollHeight == documentHeight){
+                    appenDocument();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--
+<타이머 함수>
+setInterval(함수, 시간): 특정한 시간마다 함수 실행 
+setTimeout(함수, 시간): 특정한 시간 후에 함수 실행 
+clearInterval(식별번호): selInterval() 함수로 설정한 타이머 제거 
+clearTimeout(식별번호): setTimeout() 함수로 설정한 타이머 제거 
+
+<jQuery 문서 객체 추가 메서드>
+$(객체).prependTo(대상): 객체를 대상의 앞부분에 추가 
+$(객체).appendTo(대상): 객체를 대상의 뒷부분에 추가 
+$(객체).beforeTo(대상): 객체를 대상의 앞쪽에 추가 
+$(객체).afterTo(대상): 객체를 대상의 뒤쪽에 추가 
+
+<기타 jQuery 문서 객체 추가 메서드>
+$(대상).prepend(객체): 객체를 대상의 앞부분에 추가 
+$(대상).append(객체): 객체를 대상의 뒷부분에 추가 
+$(대상).before(객체): 객체를 대상의 앞 쪽에 추가 
+$(대상).after(객체): 객체를 대상의 뒤쪽에 추가 
+
+-->

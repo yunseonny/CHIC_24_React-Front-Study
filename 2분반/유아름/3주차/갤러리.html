@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        div.item:nth-child(1) { background: blueviolet; }
+        div.item:nth-child(2) { background: pink; }
+        div.item:nth-child(3) { background-color: burlywood; }
+        [data-role="slider"] {
+            position: relative;
+            overflow: hidden;
+            width: 500px; /* 기본값 */
+            height: 300px; /* 기본값 */
+        }
+        [data-role="slider"] .container {
+            position: absolute;
+            display: flex;
+            transition: left 0.5s ease;
+        }
+        [data-role="slider"] .item {
+            width: 500px; /* 기본값 */
+            height: 300px; /* 기본값 */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 변수 선언
+            var $slider = $('[data-role="slider"]');
+            var width = $slider.attr('data-width');
+            var height = $slider.attr('data-height');
+            var $container = $slider.find('.container');
+            var $items = $container.find('.item');
+            var count = $items.length;
+            var currentPage = 0;
+
+            // 스타일 적용
+            $slider.css({
+                width: width,
+                height: height
+            });
+            $container.css({
+                width: count * width,
+                height: height
+            });
+            $items.css({
+                width: width,
+                height: height
+            });
+
+            // 슬라이드 페이지 이동 함수
+            function changePage() {
+                $container.animate({
+                    left: -currentPage * width
+                }, 500);
+            }
+
+            // 왼쪽 버튼 클릭 이벤트
+            $('#left-button').click(function() {
+                if (currentPage > 0) {
+                    currentPage--;
+                    changePage();
+                }
+            });
+
+            // 오른쪽 버튼 클릭 이벤트
+            $('#right-button').click(function() {
+                if (currentPage < count - 1) {
+                    currentPage++;
+                    changePage();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div data-role="slider" data-width="500" data-height="300">
+        <div class="container">
+            <div class="item">
+                <h1>고양이는</h1>
+                <p>냐냥냥</p>
+            </div>
+            <div class="item">
+                <h1>강아지는</h1>
+                <p>멍멍</p>
+            </div>
+            <div class="item">
+                <h1>아이스크림</h1>
+                <p>먹고 싶다</p>
+            </div>
+        </div>
+    </div>
+    <button id="left-button">←</button>
+    <button id="right-button">→</button>
+</body>
+</html>
