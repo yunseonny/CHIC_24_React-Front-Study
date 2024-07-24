@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Basic</title>
+        <style>
+            #box {
+                width: 100px; height: 100px;
+                background-color: red;
+            }
+
+            #box.hover {
+                background-color: blue;
+                border-radius: 50px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            // 이벤트 연결
+            $(document).ready(function () { // window.onload 이벤트와 동일 기능
+
+                // 스타일 속성 변경
+                $('h1').css('color', 'red');
+                $('h1').css('background', 'black');
+
+                // 속성 추출
+                var src = $('script').attr('src');
+                // 출력
+                alert(src);
+
+                // 속성 지정
+                $('img').attr('alt', 'jQuery 라이브러리를 사용한 속성 지정');
+                $('img').attr('src', 'http://placehold.it/300x200');
+                $('img').attr('width', '100');
+                
+                // 스타일 적용
+                $('.box').css('float', 'left');
+                $('.box').css('margin', 10);
+                $('.box').css('width', 100);
+                $('.box').css('height', 100);
+                $('.box').css('backgroundColor', 'red');
+
+                // 내부 글자 변경
+                $('h1:nth-child(1)').text('<a href="#">text()</a>');
+                $('h1:nth-child(2)').html('<a href="#">html()</a>');
+
+                // 변수 선언
+                var text = $('h1').text();
+                var html = $('h1').html();
+                // 출력
+                alert("text: " + text);
+                alert("html: " + html);
+
+                // 스타일 변경
+                $('#box').hover(function () {
+                    $('#box').addClass('hover');
+                }, function () {
+                    $('#box').removeClass('hover');
+                });
+                
+                
+            });
+        </script>
+    </head>
+    <body>
+        <!-- 
+        jquery: basic, select
+        jqControl: 
+            attrGet, attrSetBasic,
+            styleSetBasic,
+            textHtmlSet, textHtmlGet -->
+
+        <h1>Header - 0</h1>
+        <h1>Header - 1</h1> 
+
+        <img>
+        <img>
+        <img>
+
+        <div id="box"></div>
+        <div class="box"></div>
+
+    </body>
+</html>
