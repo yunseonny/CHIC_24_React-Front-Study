@@ -15,16 +15,44 @@
     <p id="message"></p>
 
     <script>
-      // TODO: 아래 validatePassword함수를 완성하세요.
       const validatePassword = () => {
-        // Hint: 아래 함수들은 비밀번호가 일치하는지 확인하는데 사용할 수 있습니다.
-        console.log(/[A-Z]/.test("aAa1")); // true
-        console.log(/[A-Z]/.test("aaa")); // false
-        console.log(/[a-z]/.test("AaA")); // true
-        console.log(/[a-z]/.test("AAA32")); // false
-        console.log(/[0-9]/.test("132")); // true
-        console.log(/[0-9]/.test("ABCabc")); // false
-      };
-    </script>
+          const password = document.getElementById("password").value;
+          const confirmPassword = document.getElementById("confirmPassword").value;
+          const message = document.getElementById("message");
+
+
+          // Validate length
+          const length = password.length >= 8;
+          // Validate upper case letter
+          const upper = /[A-Z]/.test(password);
+          // Validate lower case letter
+          const lower = /[a-z]/.test(password);
+          // Validate number
+          const number = /[0-9]/.test(password);
+
+          if (!length) {
+              message.innerHTML += "비밀번호는 8자 이상이어야 합니다. <br>" ;
+              
+          }
+          if (!upper) {
+              message.innerHTML += "비밀번호에는 대문자가 포함되어야 합니다. <br>" ;
+          }
+          if (!lower) {
+              message.innerHTML += "비밀번호에는 소문자가 포함되어야 합니다. <br>";
+              
+          }
+          if (!number) {
+              message.innerHTML += "비밀번호에는 숫자가 포함되어야 합니다. <br>" ;
+          }
+          if (password !== confirmPassword) {
+              message.innerHTML += "두 비밀번호가 일치하지 않습니다. <br>" ;
+          }
+
+          // Prevent form submission if validation fails
+          return length && upper && lower && number && (password === confirmPassword);
+      }
+  </script>
   </body>
 </html>
+
+
