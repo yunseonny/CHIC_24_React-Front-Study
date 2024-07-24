@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #text-container {
+            text-align: center;
+        }
+        #animated-text {
+            margin-top: 20px;
+            font-size: 1.5em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="text-container">
+        <h1>텍스트 애니메이션</h1>
+        <input type="text" id="user-text" placeholder="문구 입력">
+        <button id="show-text-btn">확인</button>
+        <div id="animated-text"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#show-text-btn').click(function () {
+                let userText = $('#user-text').val();
+                if (userText.trim() === "") {
+                    alert("문구를 입력하세요.");
+                    return;
+                }
+
+                $('#animated-text').text(userText).fadeIn().animate({
+                    fontSize: "2em",
+                    opacity: 1
+                }, 500).animate({
+                    fontSize: "1.5em",
+                    opacity: 0.8
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
