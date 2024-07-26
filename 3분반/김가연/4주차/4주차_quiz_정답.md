@@ -34,5 +34,28 @@ function FriendStatus(props) {
 export default FriendStatus;
 ```
 
+- 코드 해설
+  * 클래스형 컴포넌트:
+    상태 관리: this.state를 사용하여 isOnline 상태를 관리합니다.
+    구독 설정: componentDidMount 메서드에서 ChatAPI.subscribeToFriendStatus를 호출하여 친구의 상태를 구독합니다.
+    구독 해제: componentWillUnmount 메서드에서 ChatAPI.unsubscribeFromFriendStatus를 호출하여 친구의 상태 구독을 해제합니다.
+    상태 변경 처리: handleStatusChange 메서드에서 상태가 변경될 때 this.setState를 사용하여 isOnline 상태를 업데이트합니다.
+    렌더링: render 메서드에서 isOnline 상태에 따라 "Loading...", "Online" 또는 "Offline"을 표시합니다.
+  * 함수형 컴포넌트:
+    상태 관리: useState 훅을 사용하여 isOnline 상태를 관리합니다.
+    구독 설정 및 해제: useEffect 훅을 사용하여 컴포넌트가 마운트될 때 ChatAPI.subscribeToFriendStatus를 호출하고, 언마운트되기 전에 ChatAPI.unsubscribeFromFriendStatus를 호출하여 친구의 상태 구독을 해제합니다.
+    상태 변경 처리: handleStatusChange 함수에서 상태가 변경될 때 setIsOnline을 사용하여 isOnline 상태를 업데이트합니다.
+    렌더링: isOnline 상태에 따라 "Loading...", "Online" 또는 "Offline"을 표시합니다.
+    
+- 빈칸1 해설: 클래스형 컴포넌트에서는 this.state를 사용하여 isOnline 상태를 관리하지만, 함수형 컴포넌트에서는 useState 훅을 사용하여 isOnline 상태를 관리한다. 따라서 useState가 들어가야한다.
+- 빈칸2 해설: 클래스형 컴포넌트에서는,
+  * componentDidMount 메서드에서 ChatAPI.subscribeToFriendStatus를 호출하여 친구의 상태를 구독한다.
+  * componentWillUnmount 메서드에서 ChatAPI.unsubscribeFromFriendStatus를 호출하여 친구의 상태 구독을 해제한다.
 
+  하지만 함수형 컴포넌트에서는,
+  구독 설정 및 해제: useEffect 훅을 사용하여 컴포넌트가 마운트될 때 ChatAPI.subscribeToFriendStatus를 호출하고, 언마운트되기 전에 ChatAPI.unsubscribeFromFriendStatus를 호출하여 친구의 상태 구독을 해제한다.<br>
+  useEffect가 componentDidMount 메서드, componentWillUnmount 메서드의 역할을 동시에 수행한다고 볼 수 있다.
+
+- 빈칸3 해설: useEffect 훅은 첫 번째 인자로는 상태가 변경될 시 실행될 콜백함수를 받고 두 번째 인자로는 의존성 배열을 받는다. 이 배열에 포함된 값이 변경될 때마다 (즉 상태가 변할때마다) useEffect가 재실행됩니다.
+  따라서 배열에는 변화될 값이 들어가야 한다. => [props.friend.id]
 
